@@ -1,11 +1,5 @@
-import React from 'react';
-
-const Spinner = () => {
-  return (
-    <div className="spinner-container">
-      <div className="spinner"></div>
-    </div>
-  );
-};
-
-export default Spinner;
+const Spinner = () => (
+  <div className="flex justify-center items-center min-h-screen">
+    <Loader className="animate-spin text-blue-500" size={48} />
+  </div>
+);
