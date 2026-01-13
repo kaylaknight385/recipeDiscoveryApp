@@ -1,12 +1,17 @@
 import React from 'react';
 
-const ErrorMessage = ({ message }) => (
-    <div className="flex justify-center items-center min-h-screen">
-    <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
-      <p className="font-bold">Error</p>
-      <p>{message || 'Womp womp something went wrong. Please try again.'}</p>
+const ErrorMessage = ({ message }) => {
+  return (
+    <div className="max-w-2xl mx-auto mt-8 p-6 bg-red-50 border-2 border-red-200 rounded-xl">
+      <div className="flex items-center gap-3">
+        <span className="text-3xl"></span>
+        <div>
+          <h3 className="text-lg font-semibold text-red-800">Oops!</h3>
+          <p className="text-red-700">{message || 'Something went wrong. Please try again.'}</p>
+        </div>
+      </div>
     </div>
-);
-
+  );
+};
 
 export default ErrorMessage;

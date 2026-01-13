@@ -1,24 +1,29 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-// reusable recipe card component
-const RecipeCard = ({ recipe, onClick }) => (
-  <div 
-    onClick={onClick}
-    className="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer transform transition hover:scale-105"
-  >
-    <img 
-      src={recipe.strMealThumb} 
-      alt={recipe.strMeal}
-      className="w-full h-48 object-cover"
-    />
-    <div className="p-4">
-      <h3 className="font-semibold text-lg truncate">{recipe.strMeal}</h3>
-      {recipe.strCategory && (
-        <p className="text-sm text-gray-600 mt-1">{recipe.strCategory}</p>
-      )}
+const RecipeCard = ({ recipe }) => {
+  return (
+    <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
+      <div className="relative h-48 overflow-hidden">
+        <img 
+          src={recipe.image} 
+          alt={recipe.title} 
+          className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+        />
+      </div>
+      <div className="p-4">
+        <h3 className="text-lg font-semibold text-warm-brown-900 mb-2 line-clamp-2">
+          {recipe.title}
+        </h3>
+        <Link 
+          to={`/recipe/${recipe.id}`}
+          className="inline-block mt-2 px-4 py-2 bg-warm-brown-600 text-white rounded-lg hover:bg-warm-brown-700 transition"
+        >
+          View Recipe
+        </Link>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default RecipeCard;

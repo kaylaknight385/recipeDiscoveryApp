@@ -1,77 +1,54 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
-const Navbar = ({ onSearch, currentPage, setCurrentPage }) => {
+const Navbar = () => {
   const [searchQuery, setSearchQuery] = useState('');
-  const { favorites } = useFavorites();
+  const navigate = useNavigate();
 
-  // handle search submission
-  const handleSearchClick = () => {
+  const handleSearch = (e) => {
+    e.preventDefault();
     if (searchQuery.trim()) {
-      onSearch(searchQuery);
-    }
-  };
-
-  // handle enter key press in search input
-  const handleKeyPress = (e) => {
-    if (e.key === 'Enter') {
-      handleSearchClick();
+      navigate(`/search?q=${encodeURIComponent(searchQuery)}`);
+      setSearchQuery('');
     }
   };
 
   return (
-    <nav className="bg-blue-600 text-white shadow-lg">
+    <nav className="bg-warm-brown-800 text-warm-brown-50 shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 py-4">
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-          <div className="flex items-center gap-2">
-            <ChefHat size={32} />
-            <h1 className="text-2xl font-bold">Recipe Discovery</h1>
-          </div>
+        <div className="flex items-center justify-between flex-wrap gap-4">
+          <Link to="/" className="text-2xl font-bold hover:text-warm-brown-200 transition">
+            🍳 Recipe Haven
+          </Link>
           
-          <div className="flex-1 max-w-md">
-            <div className="relative">
-              <input
-                type="text"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                onKeyPress={handleKeyPress}
-                placeholder="Search recipes..."
-                className="w-full px-4 py-2 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300"
-              />
-              <button 
-                onClick={handleSearchClick}
-                className="absolute right-2 top-2 text-gray-600 hover:text-gray-900"
-              >
-                <Search size={20} />
-              </button>
-            </div>
-          </div>
-
+          <form onSubmit={handleSearch} className="flex gap-2 flex-1 max-w-md">
+            <input
+              type="text"
+              placeholder="Search recipes..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="flex-1 px-4 py-2 rounded-lg bg-warm-brown-700 text-warm-brown-50 placeholder-warm-brown-300 focus:outline-none focus:ring-2 focus:ring-warm-brown-500"
+            />
+            <button 
+              type="submit"
+              className="px-6 py-2 bg-warm-brown-600 hover:bg-warm-brown-500 rounded-lg font-semibold transition"
+            >
+              Search
+            </button>
+          </form>
+          
           <div className="flex gap-4">
-            <button
-              onClick={() => setCurrentPage('home')}
-              className={`flex items-center gap-2 px-4 py-2 rounded ${
-                currentPage === 'home' ? 'bg-blue-700' : 'hover:bg-blue-500'
-              }`}
-            >
-              <Home size={20} />
-              <span>Home</span>
-            </button>
-            <button
-              onClick={() => setCurrentPage('favorites')}
-              className={`flex items-center gap-2 px-4 py-2 rounded ${
-                currentPage === 'favorites' ? 'bg-blue-700' : 'hover:bg-blue-500'
-              }`}
-            >
-              <Heart size={20} />
-              <span>Favorites ({favorites.length})</span>
-            </button>
+            <Link to="/" className="px-4 py-2 hover:bg-warm-brown-700 rounded-lg transition">
+              Home
+            </Link>
+            <Link to="/favorites" className="px-4 py-2 hover:bg-warm-brown-700 rounded-lg transition">
+              Favorites
+            </Link>
           </div>
         </div>
       </div>
     </nav>
   );
 };
-
 
 export default Navbar;

@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-warm-brown-50 text-warm-brown-900;
+  }
+}
+
+@layer components {
+  .recipes-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6;
+  }
+
+  .categories-grid {
+    @apply grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 p-6;
+  }
+}

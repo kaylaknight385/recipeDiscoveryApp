@@ -14,19 +14,23 @@ const CategoryPage = () => {
   if (error) return <ErrorMessage message={error} />;
 
   return (
-    <div className="category-page">
-      <h1>{category} Recipes</h1>
-      <div className="recipes-grid">
-        {data?.meals?.map((meal) => (
-          <RecipeCard
-            key={meal.idMeal}
-            recipe={{
-              id: meal.idMeal,
-              title: meal.strMeal,
-              image: meal.strMealThumb,
-            }}
-          />
-        ))}
+    <div className="min-h-screen">
+      <div className="max-w-7xl mx-auto px-4 py-8">
+        <h1 className="text-4xl font-bold text-warm-brown-900 mb-6">
+          {category} Recipes
+        </h1>
+        <div className="recipes-grid">
+          {data?.meals?.map((meal) => (
+            <RecipeCard
+              key={meal.idMeal}
+              recipe={{
+                id: meal.idMeal,
+                title: meal.strMeal,
+                image: meal.strMealThumb,
+              }}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
