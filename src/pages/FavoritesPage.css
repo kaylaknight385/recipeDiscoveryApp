@@ -1,0 +1,51 @@
+.favorites-page {
+  min-height: 100vh;
+}
+
+.favorites-header {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 0;
+}
+
+.favorites-header h1 {
+  font-size: 2.5rem;
+  color: #43302b;
+}
+
+.no-favorites {
+  max-width: 600px;
+  margin: 4rem auto;
+  text-align: center;
+  padding: 3rem 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.no-favorites-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.no-favorites h2 {
+  font-size: 1.8rem;
+  color: #977669;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.no-favorites p {
+  font-size: 1.1rem;
+  color: #a18072;
+}
+
+@media (max-width: 768px) {
+  .favorites-header h1 {
+    font-size: 2rem;
+  }
+
+  .no-favorites {
+    margin: 2rem 1rem;
+  }
+}

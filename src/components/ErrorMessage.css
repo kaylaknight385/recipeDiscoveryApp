@@ -1,0 +1,28 @@
+.error-message {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: #fee;
+  border: 2px solid #fcc;
+  border-radius: 12px;
+}
+
+.error-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.error-icon {
+  font-size: 2rem;
+}
+
+.error-text h3 {
+  color: #c33;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.error-text p {
+  color: #a33;
+}

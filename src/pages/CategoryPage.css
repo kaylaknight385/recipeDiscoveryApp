@@ -1,0 +1,20 @@
+.category-page {
+  min-height: 100vh;
+}
+
+.category-header {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 0;
+}
+
+.category-header h1 {
+  font-size: 2.5rem;
+  color: #43302b;
+}
+
+@media (max-width: 768px) {
+  .category-header h1 {
+    font-size: 2rem;
+  }
+}
