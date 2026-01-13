@@ -45,8 +45,8 @@
 .recipe-card-content a {
   display: inline-block;
   padding: 0.5rem 1rem;
-  background-color: #a18072;
-  color: rgb(246, 242, 242);
+  background-color: #641d01;
+  color: white;
   text-decoration: none;
   border-radius: 8px;
   font-weight: 600;
@@ -54,5 +54,5 @@
 }
 
 .recipe-card-content a:hover {
-  background-color: #977669;
+  background-color: #8a2801;
 }

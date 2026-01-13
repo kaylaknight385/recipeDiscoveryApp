@@ -36,6 +36,7 @@
 }
 
 .favorite-button {
+  background-color: #641d0166;
   padding: 0.75rem 1.5rem;
   border: none;
   border-radius: 8px;
@@ -56,12 +57,12 @@
 }
 
 .favorite-button.not-saved {
-  background-color: #a18072;
+  background-color: #641d01;
   color: white;
 }
 
 .favorite-button.not-saved:hover {
-  background-color: #977669;
+  background-color: #8a2801;
 }
 
 .recipe-tags {
@@ -73,7 +74,7 @@
 
 .recipe-tag {
   padding: 0.5rem 1rem;
-  background-color: #f2e8e5;
+  background-color: #641d0166;
   color: #846358;
   border-radius: 20px;
   font-weight: 600;

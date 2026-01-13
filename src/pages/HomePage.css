@@ -11,13 +11,13 @@
 
 .home-header h1 {
   font-size: 2.5rem;
-  color: #43302b;
+  color: #fae1db;
   margin-bottom: 0.5rem;
 }
 
 .home-header p {
   font-size: 1.2rem;
-  color: #977669;
+  color: #bb9587;
 }
 
 @media (max-width: 768px) {

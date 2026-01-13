@@ -72,7 +72,7 @@
 
 .navbar-search button {
   padding: 0.5rem 1.5rem;
-  background-color: #641d0166;
+  background-color: #641d01;
   color: #fdf8f6;
   border: none;
   border-radius: 8px;
@@ -82,7 +82,7 @@
 }
 
 .navbar-search button:hover {
-  background-color: #bfa094;
+  background-color: #8a2801;
 }
 
 .navbar-links {
