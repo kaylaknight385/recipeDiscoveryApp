@@ -18,7 +18,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar-container">
         <div className="navbar-brand">
-          <Link to="/">🍳 Recipe Haven</Link>
+          <Link to="/">Recipe Haven</Link>
         </div>
         
         <form onSubmit={handleSearch} className="navbar-search">
@@ -33,7 +33,7 @@ const Navbar = () => {
         
         <div className="navbar-links">
           <Link to="/">Home</Link>
-          <Link to="/favorites">❤️ Favorites</Link>
+          <Link to="/favorites">Favorites</Link>
         </div>
       </div>
     </nav>

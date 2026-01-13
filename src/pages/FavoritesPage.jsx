@@ -9,7 +9,7 @@ const FavoritesPage = () => {
   return (
     <div className="favorites-page">
       <div className="favorites-header">
-        <h1>My Favorites ❤️</h1>
+        <h1>My Favorites</h1>
       </div>
       {favorites.length > 0 ? (
         <div className="recipes-grid">
@@ -19,7 +19,6 @@ const FavoritesPage = () => {
         </div>
       ) : (
         <div className="no-favorites">
-          <div className="no-favorites-icon">🍽️</div>
           <h2>No favorites yet</h2>
           <p>Start exploring recipes and save your favorites!</p>
         </div>

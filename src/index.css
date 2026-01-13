@@ -5,10 +5,7 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  background-color: #fdf8f6;
+  font-family: '/src/assets/BeautyRachela-Regular.otf';
   color: #43302b;
   line-height: 1.6;
 }

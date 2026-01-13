@@ -45,7 +45,7 @@ const RecipeDetailPage = () => {
               onClick={handleFavoriteToggle}
               className={`favorite-button ${isFavorite(meal.idMeal) ? 'saved' : 'not-saved'}`}
             >
-              {isFavorite(meal.idMeal) ? '❤️ Saved' : '🤍 Save'}
+              {isFavorite(meal.idMeal) ? 'Remove from Favorites' : 'Add to Favorites'}
             </button>
           </div>
           

@@ -1,5 +1,5 @@
 .category-card {
-  background: white;
+  background: rgba(106, 61, 42, 0.3);
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -39,7 +39,7 @@
 }
 
 .category-card-overlay h3 {
-  color: white;
+  color: rgb(246, 232, 232);
   font-size: 1.25rem;
   font-weight: bold;
   padding: 1rem;

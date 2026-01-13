@@ -1,11 +1,26 @@
 .navbar {
-  background-color: #846358;
+  background-image: url('../assets/bornie.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: #fdf8f6;
   padding: 1rem 2rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
   z-index: 1000;
+  position: relative;
+}
+
+.navbar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(132, 99, 88, 0.7);
+  z-index: -1;
 }
 
 .navbar-container {
@@ -42,7 +57,7 @@
   padding: 0.5rem 1rem;
   border: none;
   border-radius: 8px;
-  background-color: #977669;
+  background-color: #641d0166;
   color: #fdf8f6;
   font-size: 1rem;
 }
@@ -57,7 +72,7 @@
 
 .navbar-search button {
   padding: 0.5rem 1.5rem;
-  background-color: #a18072;
+  background-color: #641d0166;
   color: #fdf8f6;
   border: none;
   border-radius: 8px;
